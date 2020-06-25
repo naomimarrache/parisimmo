@@ -13,3 +13,11 @@ from fonctions import *
 
 df_aggregate_csv(fichiers_csv())
 
+
+
+
+######### COPY DU FICHIER CREER DANS APP POUR LA PARTIE FRONT ##########
+
+import shutil
+
+filePath = shutil.copy('data.csv', 'app/data.csv')

@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request, url_for, flash, redirect
 import time
-
+from fonctions_app import map_prixmc_arrondissement
 import folium
 
 app = Flask(__name__)
@@ -23,8 +23,11 @@ def test():
 
 @app.route('/test_map')
 def test_map():
-    start_coords = (46.9540700, 142.7360300)
+    """start_coords = (46.9540700, 142.7360300)
     folium_map = folium.Map(location=start_coords, zoom_start=14)
+    folium_map.save('templates/map.html')
+    """
+    folium_map = map_prixmc_arrondissement()
     folium_map.save('templates/map.html')
     return render_template('test_map.html')
     
