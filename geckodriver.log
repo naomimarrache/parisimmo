@@ -98,9 +98,13 @@ JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: Web
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
-1593045790297	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofileQyaxcw"
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1593045798893	Marionette	INFO	Listening on port 65107
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1593104444152	Marionette	INFO	Stopped listening on port 64669
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ing on port 65107
 1593045799250	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
@@ -120,18 +124,24 @@ JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: Web
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
-1593045970004	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofileYPe4MV"
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 13504, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1593104442616	Marionette	INFO	Stopped listening on port 65107
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+rce://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1593045976025	Marionette	INFO	Listening on port 65334
-1593045976228	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1593046165588	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofilen61hOV"
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1593046171845	Marionette	INFO	Listening on port 49249
-1593046171926	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1593104442573	Marionette	INFO	Stopped listening on port 65334
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+cript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
@@ -142,21 +152,30 @@ JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: Web
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
-1593047123718	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofileYV5oVX"
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1593104444107	Marionette	INFO	Stopped listening on port 49249
+jsm, line 66: Error: Can't find profile directory.
 1593047133044	Marionette	INFO	Listening on port 50418
 1593047133271	Marionette	WARN	TLS certificate errors will be ignored for this session
-1593047136427	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofileFWCGBN"
+1593104437412	Marionette	INFO	Stopped listening on port 50418
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+"-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofileFWCGBN"
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1593047142858	Marionette	INFO	Listening on port 50469
 1593047143261	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: uncaught exception: Object
-:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Naomi\\AppData\\Local\\Temp\\rust_mozprofile5KXAWm"
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1593047449578	Marionette	INFO	Listening on port 50859
-1593047449809	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1593104440540	Marionette	INFO	Stopped listening on port 50469
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+6: Error: Can't find profile directory.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
@@ -199,3 +218,13 @@ JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: Web
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
 JavaScript warning: https://www.orpi.com/build/js/main.js?740253512, line 9: WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 314: TypeError: state is undefined
+JavaScript error: resource://gre/actors/BrowserElementParent.jsm, line 314: TypeError: state is undefined
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 2226: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1593104444671	Marionette	INFO	Stopped listening on port 51012
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
