@@ -7,4 +7,9 @@ Created on Wed Jun 24 20:48:06 2020
 """
 from fonctions import *
 
+
+
+###########   AGGREATE DATA FROM DIFFERENT ################
+
 df_aggregate_csv(fichiers_csv())
+

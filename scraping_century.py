@@ -68,6 +68,8 @@ print(df.loc[df['prix_mc'].idxmax(), 'arrondissement'])
 df.loc[df['surface']==1].lien
 
 df2 = df.copy()
+
+df2 = df2[df2.arrondissement < 21 ]
 df2 = df2.drop_duplicates(subset=['lien'], keep=False)
 
 df2.to_csv('csv/century.csv', header=True, index=False) 
