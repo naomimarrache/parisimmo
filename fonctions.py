@@ -1,17 +1,3 @@
-
-"""
-def lien_par_arrondissement(lien_annonces_paris):
-    for i in range(1,21):
-        base_url = 'https://www.pap.fr/annonce/vente-appartements-paris-'
-        base_url_part2 = "g377"
-        if i == 1:
-            lien_annonces_paris.append('https://www.pap.fr/annonce/vente-appartements-paris-1er-g37768')
-        else:
-            lien_annonces_paris.append(base_url+str(i)+'e-'+base_url_part2+str(67+i))
-
-"""
-
-
 from os import listdir
 from os.path import isfile, join
 import os
@@ -20,7 +6,6 @@ import pandas as pd
 from fonctions import *
 import csv 
 from bs4 import BeautifulSoup
-
 from selenium import webdriver
 
 

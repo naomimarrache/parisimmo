@@ -4,6 +4,14 @@ import folium
 import pandas as pd
 import json
 
+import csv
+import pandas as pd
+#import matplotlib.pyplot as plt
+import numpy as np
+#from matplotlib import cm
+#import seaborn as sns
+
+
 
 def map_prixmc_arrondissement():
     geo = json.load(open("arrondissements.geojson"))
