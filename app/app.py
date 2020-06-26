@@ -20,9 +20,9 @@ def home():
 @app.route('/test',methods = ['POST'])
 def test():
     result = request.form
-    r = result['review']
-    #prediction = "positive"
-    return render_template('test.html', review=r, prediction="a", langue=r)
+    arrondissement = result['arrondissement']
+    nombre = result['nombre']
+    return render_template('test.html', arrondissement=arrondissement, nombre=nombre)
 
 
 @app.route('/test_piechart')
@@ -53,24 +53,23 @@ def test_hist():
 
 @app.route('/test_map')
 def test_map():
-    """start_coords = (46.9540700, 142.7360300)
-    folium_map = folium.Map(location=start_coords, zoom_start=14)
-    folium_map.save('templates/map.html')
-    """
     folium_map = map_prixmc_arrondissement()
     folium_map.save('templates/map.html')
     return render_template('test_map.html')
+
+
+
  
+    
+def fonction_front_end(arrondissement,nombre_annonce):
+    df=pd.read_csv('data.csv')
+    df2=df.copy()
+    df2 = df2[ df2.arrondissement == arrondissement]
+    df2=df2.sort_values(by=['prix_mc'],ascending=True)
+    return df2.head(nombre_annonce)
 
     
 
-"""
-@app.route('/test_pie')
-def test_pie():
-    df = pd.read_csv("data.csv") 
-    pie_chart = df["arrondissement"].value_counts(normalize=True).plot(kind='pie',figsize=(10,6))
-    return render_template('test_pie.html', plot = "coucou")
-""" 
 
 
 def function_tracer(var1,var2):

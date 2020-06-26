@@ -25,13 +25,14 @@
 
 <!--<h1> {{ name }}</h1>-->
 
-<form action="http://localhost:5000/test" method="post" style="margin:10%">
+<form action="http://localhost:5000/test" method="post" style="margin-left:30%;margin-right:30%;margin-top:10%">
 	<div class="form-group">
-		<label for="exampleReview">Your Review</label>
-		<input type="text" class="form-control" id="exampleReview" aria-describedby="reviewHelp" name="review" required="required">
-		<small id="reviewHelp" class="form-text text-muted">Ready to be analyzed</small>
+		<label for="exampleReview">Meilleur prix au m2 dans l'arrondissement de mon choix</label>
+		<input type="number" class="form-control" id="exampleReview" aria-describedby="reviewHelp" name="arrondissement" placeholder="arrondissement" required="required">
+		<input type="number" class="form-control" id="exampleReview" aria-describedby="reviewHelp" name="nombre" placeholder="nombre d'annonce" required="required">
+		<small id="reviewHelp" class="form-text text-muted">Trouvez la bonne occasion à saisir</small>
 	</div>
-	<button type="submit"  class="btn btn-primary" style="margin-left:42%;margin-top:3%;" value="Analyse">Analyze</button>
+	<button type="submit"  class="btn btn-primary" style="margin-left:42%;margin-top:3%;" value="Analyse">Search</button>
 	<br>
 	<div class="spinner-grow text-success" role="status" style="margin-left:41%;margin-top:3%;">
 		<span class="sr-only">Loading...</span>
