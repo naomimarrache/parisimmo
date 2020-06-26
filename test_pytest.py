@@ -38,9 +38,6 @@ def test_scraping_by_annonce_century():
     
     
     
-    "when"
-    "given"
-    
 
   
     

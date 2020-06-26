@@ -35,7 +35,9 @@ lien = []
 base_lien = "https://www.century21.fr"
 liens_annonces_paris = liens_annonces_paris(nb_pages)
 
-
+#############################
+####### SCRAPING  ###########
+#############################
 for link in liens_annonces_paris:
     #link = liens_annonces_paris[0]
     r = requests.get(link) 
@@ -46,6 +48,11 @@ for link in liens_annonces_paris:
         scraping_by_annonce_century(annonce,arrondissement,nb_pieces,nb_chambres,surface,prix,lien,base_lien)
     
 
+
+
+##############################################################
+############    CREATION DATAFRAME ET FICHIER CSV    #########
+##############################################################
 
 data = {'arrondissement':arrondissement,
         'nb_pieces':nb_pieces,
@@ -68,7 +75,7 @@ print(df.loc[df['prix_mc'].idxmax(), 'arrondissement'])
 df.loc[df['surface']==1].lien
 
 df2 = df.copy()
-
+###nettoyage et suppression des doublons 
 df2 = df2[df2.arrondissement < 21 ]
 df2 = df2.drop_duplicates(subset=['lien'], keep=False)
 

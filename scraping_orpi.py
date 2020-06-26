@@ -67,12 +67,18 @@ link_appart=[]
 base_lien_annonce = 'https://www.orpi.com'
 
 
+#############################
+####### SCRAPING  ###########
+#############################
 for link in all_appart_links:
     load_data_by_page_orpi(link,driver,arrondissement,prix,info,nb_pieces,surface, lien)
     print(link)
 
 
  
+##############################################################
+############    CREATION DATAFRAME ET FICHIER CSV    #########
+##############################################################
 
 data = {'arrondissement':arrondissement,
         'nb_pieces':nb_pieces,

@@ -12,17 +12,12 @@ from selenium import webdriver
 import time
 import pandas as pd
 
-
-#lien_1a10 = "https://www.pap.fr/annonce/achat-vente-appartement-paris-1er-g37768g37769g37770g37771g37772g37773g37774g37775g37776g37777"
-#lien_11a20 = "https://www.pap.fr/annonce/vente-appartements-paris-11e-g37778g37779g37780g37781g37782g37783g37784g37785g37786g37787"
 lien_annonces_paris = []
 lien_1a5 = 'https://www.pap.fr/annonce/achat-vente-appartement-paris-1er-g37768g37769g37770g37771g37772'
 lien_6a10 = 'https://www.pap.fr/annonce/achat-vente-appartement-paris-6e-g37773g37774g37775g37776g37777'
 lien_11a15 = 'https://www.pap.fr/annonce/achat-vente-appartement-paris-11e-g37778g37779g37780g37781g37782'
 lien_16a20 = 'https://www.pap.fr/annonce/achat-vente-appartement-paris-16e-g37783g37784g37785g37786g37787'
 lien_annonces_paris = [lien_1a5,lien_6a10,lien_11a15, lien_16a20]
-#lien_par_arrondissement(lien_annonces_paris)
-#lien_annonces_paris = [lien_1a10, lien_11a20]
 
 
 base_lien_annonce = 'https://www.pap.fr'
@@ -34,6 +29,12 @@ surface = []
 prix = []
 lien = []
 
+
+
+
+#############################
+####### SCRAPING  ###########
+#############################
 
 for lien_annonces in lien_annonces_paris:
     driver = webdriver.Firefox()
@@ -60,6 +61,11 @@ for lien_annonces in lien_annonces_paris:
                 print("e")
 
 
+
+##############################################################
+############    CREATION DATAFRAME ET FICHIER CSV    #########
+##############################################################
+
 data = {'arrondissement':arrondissement,
         'nb_pieces':nb_pieces,
         'nb_chambres':nb_chambres,
@@ -69,14 +75,6 @@ data = {'arrondissement':arrondissement,
         }
 
 df = pd.DataFrame(data)
-#en faisant la commande suivante on voit bien que ça ne suffit pas, pas assez d'annonces pour chauqe arrondissemnt
-#il faudra scrapper chaque arrondissment puis supprimer les doublons dans la base
-print(df.arrondissement.value_counts())
-###############################################
-####            INTERP!RETATION       #########
-###############################################
-
-#Si jamais je trouve une bonne affaire pour des arrondissemnt où il n'y à pas beaucoup d'offre, je devrais penser à la saisir.
 
 prix_mc = []
 for index_df in range(df.shape[0]):
@@ -84,8 +82,6 @@ for index_df in range(df.shape[0]):
     
     
 df['prix_mc'] = df['prix']/df['surface']
-
-
 
 
 print(df.loc[df['prix_mc'].idxmax(), 'arrondissement'])

@@ -24,14 +24,15 @@
 
 
 <!--<h1> {{ name }}</h1>-->
-
+<!--
 <form action="http://localhost:5000/test" method="post" style="margin-left:30%;margin-right:30%;margin-top:10%">
 	<div class="form-group">
 		<label for="exampleReview">Meilleur prix au m2 dans l'arrondissement de mon choix</label>
 		<input type="number" class="form-control" id="exampleReview" aria-describedby="reviewHelp" name="arrondissement" placeholder="arrondissement" required="required">
-		<input type="number" class="form-control" id="exampleReview" aria-describedby="reviewHelp" name="nombre" placeholder="nombre d'annonce" required="required">
 		<small id="reviewHelp" class="form-text text-muted">Trouvez la bonne occasion à saisir</small>
+    	<input type="number" class="form-control" id="exampleReview" aria-describedby="reviewHelp" name="nombre" placeholder="nombre d'annonce" required="required">
 	</div>
+	
 	<button type="submit"  class="btn btn-primary" style="margin-left:42%;margin-top:3%;" value="Analyse">Search</button>
 	<br>
 	<div class="spinner-grow text-success" role="status" style="margin-left:41%;margin-top:3%;">
@@ -46,16 +47,25 @@
 
 
 </form>
-
-<!--
-<div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-	<span class="sr-only">Loading...</span>
-</div>
 -->
 
-<!--<img src="/static/smiley.jpg" height="300" style="border-radius:100%;">-->
-<br>
+<form action="http://localhost:5000/test" method="post" style="margin-left:30%;margin-right:30%;margin-top:10%">
+    <label for="exampleReview">Meilleur prix au m2 dans l'arrondissement de mon choix</label>
+    <br>
+	<input type="number" name="arrondissement" placeholder="arrondissement">
+	<input type="number" name="nombre" placeholder="nombre  max d'annonce">
+	<input type="submit" value="search" class="btn btn-primary">
+    <div class="spinner-grow text-success" role="status" style="margin-left:41%;margin-top:3%;">
+		<span class="sr-only">Loading...</span>
+	</div>
+	<div class="spinner-grow text-warning" role="status" >
+		<span class="sr-only">Loading...</span>
+	</div>
+	<div class="spinner-grow text-danger" role="status" >
+		<span class="sr-only">Loading...</span>
+	</div>
+</form>
 
-<!--<a href="/test">Test</a>-->
+
 </body>
 </html>

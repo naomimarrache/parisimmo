@@ -22,7 +22,8 @@ def test():
     result = request.form
     arrondissement = result['arrondissement']
     nombre = result['nombre']
-    return render_template('test.html', arrondissement=arrondissement, nombre=nombre)
+    df3 = fonction_annonce_par_arrondissement_prixmc(int(arrondissement),int(nombre))
+    return render_template('test.html', arrondissement=arrondissement, nombre=nombre, dataframe=df3.to_html())
 
 
 @app.route('/test_piechart')
@@ -40,6 +41,7 @@ def test_piechart():
 
 @app.route('/test_hist') 
 def test_hist():
+    
     df = pd.read_csv("data.csv") 
     color = cm.inferno_r(np.linspace(.3, .8, 30))
     plt.figure(figsize=(10,8))
@@ -59,6 +61,13 @@ def test_map():
 
 
 
+@app.route("/df")
+def dataframe():
+    df=pd.read_csv('data.csv')
+    df2=df.copy()
+    df2 = df2[ df2.arrondissement == 18]
+    df2=df2.sort_values(by=['prix_mc'],ascending=True)
+    return render_template("df.html", dataframe=df2.to_html())
  
     
 def fonction_front_end(arrondissement,nombre_annonce):
@@ -81,6 +90,22 @@ def function_tracer(var1,var2):
     sns.barplot(x=df_tracer[var2], y=df_tracer[var1], palette="Blues_r")
     plt.tight_layout()
     
+    
+    
+def fonction_annonce_par_arrondissement_prixmc(arrondissement,nombre_annonce):
+    """
+    this function returns the best opportunity of price by neighborhood
+    :param arrondissement : the number of neighborhood  
+    :param nombre_annonce : the number of annonce we want to see  
+    :return: a dataframe of price by m2 order by asc, depending on the number of neighborhood
+    :rtype: a dataframe 
+    
+    """
+    df=pd.read_csv('data.csv')
+    df2=df.copy()
+    df2 = df2[ df2.arrondissement == arrondissement]
+    df2=df2.sort_values(by=['prix_mc'],ascending=True)
+    return df2.head(nombre_annonce)
 
 
 if __name__ == '__main__':
